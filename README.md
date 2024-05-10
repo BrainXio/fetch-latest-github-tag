@@ -42,10 +42,10 @@ jobs:
         repo: '<REPO_NAME>'
 
     - name: Print Latest Tag
-        run: echo "Latest Tag ${{ env.GH_BRAINXIO_ACTIONS_LATEST_TAG }}"
+        run: echo "Latest Tag ${{ env.GH_<REPO_OWNER>_<REPO_NAME>_LATEST_TAG }}"
 ```
 
-> Notice the prefix 'GH_' and the '${OWNER_REPO}' in the environment variable, they are mandatory to get actual data out.
+> Notice the prefix 'GH_' and the '$<REPO_OWNER>_<REPO_NAME>' in the environment variable, they are mandatory to get actual data out and depend on the request values. Example variable: `GH_BRAINXIO_FETCH_LATEST_GITHUB_TAG' 
 
 ### Inputs
 
