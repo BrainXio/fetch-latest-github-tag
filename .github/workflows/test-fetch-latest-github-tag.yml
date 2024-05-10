@@ -1,7 +1,7 @@
 name: 'Test Fetch Latest Github Tag'
 
 on:
-  push: ['main']
+  push:
   pull_request:
     branches: ['main']
   workflow_dispatch:
