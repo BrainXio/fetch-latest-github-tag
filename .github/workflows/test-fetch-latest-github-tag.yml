@@ -22,7 +22,5 @@ jobs:
         repo: 'actions'
 
     - name: Print Latest Tag
-      run: echo "Latest Tag ${{ env.GH_LATEST_TAG }}"
+      run: echo "Latest Tag ${{ env.GH_BRAINXIO_ACTIONS_LATEST_TAG }}"
 
-    - name: Debug Latest Tag Value
-      run: echo "Latest Tag Value ${{ env.latest-tag }}"
