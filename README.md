@@ -32,7 +32,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Fetch Latest Tag
       id: fetch-latest-tag
@@ -42,10 +42,8 @@ jobs:
         repo: '<REPO_NAME>'
 
     - name: Print Latest Tag
-        run: echo "Latest Tag ${{ env.GH_<REPO_OWNER>_<REPO_NAME>_LATEST_TAG }}"
+        run: echo "Latest Tag ${{ env.GH_LATEST_TAG }}"
 ```
-
-> Notice the prefix 'GH_' and the '$<REPO_OWNER>_<REPO_NAME>' in the environment variable, they are mandatory to get actual data out and depend on the request values. Example variable: `GH_BRAINXIO_FETCH_LATEST_GITHUB_TAG' 
 
 ### Inputs
 
@@ -69,7 +67,7 @@ Fetching the latest tag from the repository `brainxio/actions` is as simple as:
     repo: 'actions'
 
 - name: Print Latest Tag
-    run: echo "Latest Tag ${{ env.GH_BRAINXIO_ACTIONS_LATEST_TAG }}"
+    run: echo "Latest Tag ${{ env.GH_LATEST_TAG }}"
 ```
 
 ## 📝 License

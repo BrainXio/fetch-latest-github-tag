@@ -22,4 +22,4 @@ runs:
                    "https://api.github.com/repos/${{ inputs.owner }}/${{ inputs.repo }}/tags" | jq -r '[.[] | select(.name | test("-rc") | not)] | .[].name')
         latest_tag=$(echo "$tags" | head -n 1 || echo "No tags available")
         OWNER_REPO=$(echo "${{ inputs.owner }}_${{ inputs.repo }}" | tr '[:lower:]' '[:upper:]')
-        echo "GH_${OWNER_REPO}_LATEST_TAG=$latest_tag" >> $GITHUB_ENV
+        echo "GH_LATEST_TAG=$latest_tag" >> $GITHUB_ENV
