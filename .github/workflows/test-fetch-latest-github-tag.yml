@@ -25,4 +25,4 @@ jobs:
       run: echo "Latest Tag ${{ env.GH_LATEST_TAG }}"
 
     - name: Debug Latest Tag Output
-      run: echo "Latest Tag Output: ${{ toJson(steps.fetch-latest-tag.outputs) }}"
+      run: echo "Latest Tag Output ${{ toJson(steps.fetch-latest-tag.outputs) }}"
