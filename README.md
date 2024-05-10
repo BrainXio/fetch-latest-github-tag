@@ -42,7 +42,7 @@ jobs:
         repo: '<REPO_NAME>'
 
     - name: Print Latest Tag
-        run: echo "Latest Tag ${{ env.GH_LATEST_TAG }}"
+        run: echo "Latest Tag ${{ env.GH_<REPO_OWNER>_<REPO_NAME>_LATEST_TAG }}"
 ```
 
 ### Inputs
@@ -67,7 +67,7 @@ Fetching the latest tag from the repository `brainxio/actions` is as simple as:
     repo: 'actions'
 
 - name: Print Latest Tag
-    run: echo "Latest Tag ${{ env.GH_LATEST_TAG }}"
+    run: echo "Latest Tag ${{ env.GH_BRAINXIO_ACTIONS_LATEST_TAG }}"
 ```
 
 ## 📝 License
