@@ -25,4 +25,4 @@ jobs:
       run: echo "Latest Tag ${{ env.GH_LATEST_TAG }}"
 
     - name: Print Latest Tag
-      run: echo "Latest Tag ${{ steps.fetch-latest-tag.outputs['latest-tag'] }}"
+      run: echo "Latest Tag ${{ steps.fetch-latest-tag.outputs.latest-tag }}"
