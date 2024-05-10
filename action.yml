@@ -10,7 +10,6 @@ inputs:
 outputs:
   latest-tag:
     description: 'The latest tag name'
-    value: "${{ env. GH_LATEST_TAG }}"
 runs:
   using: 'composite'
   steps:
@@ -24,3 +23,4 @@ runs:
         latest_tag=$(echo "$tags" | head -n 1 || echo "No tags available")
         OWNER_REPO=$(echo "${{ inputs.owner }}_${{ inputs.repo }}" | tr '[:lower:]' '[:upper:]')
         echo "GH_LATEST_TAG=$latest_tag" >> $GITHUB_ENV
+        echo "latest-tag=$latest_tag" >> $GITHUB_ENV
